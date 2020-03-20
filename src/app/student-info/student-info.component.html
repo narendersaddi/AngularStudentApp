@@ -1,0 +1,73 @@
+<div class=" std-details">
+  <h3>Student Inforamtion</h3>
+  <div class="card">
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+            <th>Image</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let  list of Stdlist">
+            <td>{{list.first_name}}</td>
+            <td>{{list.last_name}}</td>
+            <td>{{list.email}}</td>
+            <td><img src="{{list.avatar}}" class="image" alt="img"></td>
+            <td><button class="btn btn-secondary" (click)="editStudentData(list.id)" data-toggle="modal" data-target="#myModal">Edit</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+      Open modal
+    </button> -->
+  
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Edit student Details</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form #editForm="ngForm" (ngSubmit)="updateStudent(stdlistInfo)">
+              <div class="form-group">
+                <label for="email">First Name</label>
+                <input type="text" class="form-control" placeholder="Enter Firstname" name ="first_name" [(ngModel)]="stdlistInfo.first_name">
+              </div>
+              <div class="form-group">
+                <label for="pwd">Last Name</label>
+                <input type="text" class="form-control" placeholder="Enter Last name" name="last_name" [(ngModel)]="stdlistInfo.last_name">
+              </div>
+              <div class="form-group">
+                <label for="pwd">Email</label>
+                <input type="email" class="form-control" placeholder="Enter email" name="email" [(ngModel)]="stdlistInfo.email">
+              </div>
+              <div class="form-group">
+                <label for="pwd">Image</label>
+               
+                <input type="text-area" class="form-control" name="avatar"  [(ngModel)]="stdlistInfo.avatar">
+                <img src="{{stdlistInfo.avatar}}" alt="">
+              </div>
+              <button type="submit" class="btn btn-primary" data-dismiss="modal">Submit</button>
+            </form>
+          </div>
+          
+          <!-- Modal footer -->
+          <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div> -->
+          
+        </div>
+      </div>
+    </div>
+    

@@ -1,0 +1,40 @@
+<div class="container-fluid dashboard">
+    <div class="container">
+        <div class="dashboard-menu">
+            <div class="row">
+            <div class="col-sm-6 col-md-4 title-menu">
+                <h3>DashBoard</h3>
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-sm-6 col-md-4 form-group  menu">
+                <input type="search" class="form-control" placeholder="search">
+                <a href="" (click)="logout()">LogOut</a>
+            </div>
+        </div>
+        </div>
+    </div> 
+</div>
+
+<div class="container-fluid">
+  
+    <div class="row">
+      <div class="col-md-2 sideBar">   
+          <ul>
+            <li><i class='far fa-address-card'></i><a [routerLink]="['studentInfo']">Student Info</a></li>
+            <li><i class='far fa-address-book'></i><a [routerLink]="['studentRecards']">Student Recards</a></li>
+            <li><i class='fas fa-arrows-alt'></i><a [routerLink]="['events']">Events</a></li>
+            <li><i class='far fa-handshake'></i><a [routerLink]="['appreciations']">Appreciations</a></li>
+            <li><i class='fas fa-atom'></i><a [routerLink]="['actions']">Actions</a></li>    
+        </ul>
+    </div>
+      <div class="col-md-10" ><router-outlet></router-outlet></div>
+  
+    </div>
+  </div>
+
+
+
+<footer>
+    <p class="center">Ojas Innovative Technologies..@copyright-2020.</p>
+</footer>
+

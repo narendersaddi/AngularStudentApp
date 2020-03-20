@@ -1,0 +1,11 @@
+h4{
+    padding: 10px 15px;margin: 0;
+}
+.card-data{
+    margin: 20px 20px 10px;
+}
+.card{
+border: 2px solid #adb5bd;
+    border-radius: 0.55rem;
+    height: 165px;
+}

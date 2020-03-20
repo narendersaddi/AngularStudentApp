@@ -1,0 +1,51 @@
+.dashboard{
+    background-color: steelblue;
+}
+.container{
+    padding: 0;
+}
+h3{
+    color:#fff;padding: 10px 0px;margin: 0;
+}
+.title-menu{
+    display: inline-block;padding:0px;
+}
+.menu{
+    float: right;
+    display: inline-flex;
+    margin-top: 8px;
+}
+.menu a{
+    color: #fff;
+    font-weight: 600;
+    padding: 5px 10px;
+}
+.sideBar{
+    background: #023f5ddb;
+    
+    height: 600px;
+}
+.sideBar ul li{
+    list-style-type: none;padding: 10px 15px;
+}
+.sideBar ul li i{
+    padding: 10px;
+    color: white;font-size: 25px;
+}
+.sideBar ul li a{
+    color: white;font-size: 15px;
+}
+.sideBar ul{
+    padding-top: 25px;padding-left: 10px;
+}
+footer{
+    height: 80px;
+    background-color: steelblue;
+   
+    color: white;
+    text-align: center;
+}
+footer p{
+    padding: 30px;
+}
+
